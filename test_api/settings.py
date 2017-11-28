@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-a=h8)2hy=lpk%)1)thjb_^+pe$6l@e@sm8*3pv4@mb89#sqod'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -72,6 +72,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'test_api.wsgi.application'
+
+# так біло на сайте https://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html
+#SECRET_KEY = config('SECRET_KEY')
+#DEBUG = config('DEBUG', default=False, cast=bool)
+#DATABASES = {
+#    'default': dj_database_url.config(
+#        default=config('DATABASE_URL')
+#    )
+#}
+
 
 
 # Database
