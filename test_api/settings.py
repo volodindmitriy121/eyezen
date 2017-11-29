@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+import dj_database_url
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -76,27 +78,27 @@ WSGI_APPLICATION = 'test_api.wsgi.application'
 # так біло на сайте https://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html
 #SECRET_KEY = config('SECRET_KEY')
 #DEBUG = config('DEBUG', default=False, cast=bool)
-#DATABASES = {
-#    'default': dj_database_url.config(
-#        default=config('DATABASE_URL')
-#    )
-#}
+DATABASES = {
+    'default': dj_database_url.config(
+        default=dj_database_url.config('DATABASE_URL')
+    )
+}
 
 
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'test_api',
-        'USER': 'api_user',
-        'PASSWORD': '12QWaszx',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'test_api',
+#        'USER': 'api_user',
+#        'PASSWORD': '12QWaszx',
+#        'HOST': 'localhost',
+#        'PORT': '',
+#    }
+#}
 
 
 # Password validation
