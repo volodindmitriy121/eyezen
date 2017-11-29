@@ -85,7 +85,7 @@ DATABASES = {
         default=dj_database_url.config('DATABASE_URL')
     )
 }
-
+DATABASE_URL = 'postgres://hlslkecmsuuyiv:2f34fafd026427ffde973d2d0feb055d2171185ee3478e99708b8b14682c4c67@ec2-54-221-246-84.compute-1.amazonaws.com:5432/dc5rvuedhl0hu4'
 DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
 
 
