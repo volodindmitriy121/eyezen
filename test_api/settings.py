@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'test_api.wsgi.application'
 
 # так біло на сайте https://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html
 SECRET_KEY = "-a=h8)2hy=lpk%)1)thjb_^+pe$6l@e@sm8*3pv4@mb89#sqod"
-DEBUG = True
+DEBUG = False
 DATABASES = {
     'default': dj_database_url.config(
         default=dj_database_url.config('DATABASE_URL')

@@ -5,8 +5,6 @@ from tastypie import fields
 
 class UserResource(ModelResource):
 
-
-
     class Meta:
         queryset = ta.User.objects.all()
         resource_name = 'user'
