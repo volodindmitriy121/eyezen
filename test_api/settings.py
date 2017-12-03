@@ -78,13 +78,14 @@ WSGI_APPLICATION = 'test_api.wsgi.application'
 
 
 # так біло на сайте https://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html
-SECRET_KEY = dj_database_url.config('SECRET_KEY')
+SECRET_KEY = "-a=h8)2hy=lpk%)1)thjb_^+pe$6l@e@sm8*3pv4@mb89#sqod"
 DEBUG = True
 DATABASES = {
     'default': dj_database_url.config(
         default=dj_database_url.config('DATABASE_URL')
     )
 }
+DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 #DATABASE_URL = 'postgres://hlslkecmsuuyiv:2f34fafd026427ffde973d2d0feb055d2171185ee3478e99708b8b14682c4c67@ec2-54-221-246-84.compute-1.amazonaws.com:5432/dc5rvuedhl0hu4'
 DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
 
